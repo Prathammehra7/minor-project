@@ -85,6 +85,18 @@ export const programs = [
     export const plans = [
         {
             id: 1,
+            name: 'Bronze Package',
+            desc: 'This package is perfect for busy people who need home service',
+            price: 11.99,
+            features: [
+                {feature: 'First Feature', available: true},
+                {feature: 'Second Feature', available: true},
+                {feature: 'Third Feature', available: true},
+                {feature: 'Fourth Feature', available: true},
+            ]
+        },
+        {
+            id: 2,
             name: 'Silver Package',
             desc: 'This package is perfect for beginners who need constant help',
             price: 29.99,
@@ -94,13 +106,11 @@ export const programs = [
                 {feature: 'Third Feature', available: true},
                 {feature: 'Fourth Feature', available: true},
                 {feature: 'Fifth Feature', available: true},
-                {feature: 'Fifth Feature Plus', available: false},
-                {feature: 'Sixth Feature', available: false},
-             
+                {feature: 'Fifth Feature Plus', available: false},             
             ]
         },
         {
-            id: 2,
+            id: 3,
             name: 'Gold Package',
             desc: 'This is the perfect package for beginners who know what their doing',
             price: 49.99,
@@ -112,16 +122,32 @@ export const programs = [
                 {feature: 'Fifth Feature', available: true},
                 {feature: 'Fifth Feature Plus', available: true},
                 {feature: 'Sixth Feature', available: true},
-                {feature: 'Seventh Feature', available: true},
-                {feature: 'Seventh Feature Plus', available: true},
+              
             ]
                
         },
         {
-            id: 3,
+            id: 4,
             name: 'Platinum Package',
             desc: 'This package is perfect for busy people who need home service',
-            price: 89.99,
+            price: 79.99,
+            features: [
+                {feature: 'First Feature', available: true},
+                {feature: 'Second Feature', available: true},
+                {feature: 'Third Feature', available: true},
+                {feature: 'Fourth Feature', available: true},
+                {feature: 'Fifth Feature', available: true},
+                {feature: 'Fifth Feature Plus', available: true},
+                {feature: 'Sixth Feature', available: true},
+                {feature: 'Seventh Feature', available: true},
+                {feature: 'Seventh Feature Plus', available: true},               
+            ]
+        },
+        {
+            id: 5,
+            name: 'Diamond Package',
+            desc: 'This package is perfect for busy people who need home service',
+            price: 109.99,
             features: [
                 {feature: 'First Feature', available: true},
                 {feature: 'Second Feature', available: true},
@@ -134,12 +160,11 @@ export const programs = [
                 {feature: 'Seventh Feature Plus', available: true},
                 {feature: 'Eighth Feature', available: true},
                 {feature: 'Ninth Feature', available: true},
-               
             ]
         },
         {
-            id: 4,
-            name: 'Diamond Package',
+            id: 6,
+            name: 'Crown Package',
             desc: 'This package is perfect for busy people who need home service',
             price: 119.99,
             features: [
@@ -157,5 +182,6 @@ export const programs = [
                 {feature: 'Tenth Feature', available: true},
                 {feature: 'Eleventh Feature', available: true}
             ]
-        }
+        },
+       
     ]

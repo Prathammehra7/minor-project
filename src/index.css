@@ -113,6 +113,7 @@ background: var(--color-gray-100);
   padding: 3rem 2rem;
   border-radius: 3rem 3rem 3rem 3rem;
   transition: var(--transition);
+  height: auto;
 
 }
 
