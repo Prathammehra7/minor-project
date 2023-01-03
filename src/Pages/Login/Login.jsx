@@ -1,22 +1,15 @@
 import React, { useState } from 'react';
-// import Footer from '../../Footer/Footer';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./login.css"
 import axios from "axios";
-export default function Loginpage() {
+
+export default function Login() {
 
 	const [Email, setEmail] = useState("");
 	const [password, setpassword] = useState("");
 	async function handleLogin() {
-		// if (email && password) {
-		//     window.location.href = "/Product";
-
-		// }
-		// else {
-		//     window.location.href = "/Login"
-		// }
-
+	
 		const user = {
 			Email,
 			password,
@@ -68,8 +61,6 @@ export default function Loginpage() {
 			</div>
 			<ToastContainer />
 
-
-			{/* <Footer /> */}
 		</>
 	);
 }
