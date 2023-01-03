@@ -35,8 +35,10 @@
     /* gap: 20rem; */
     
 }
-.imggg{
-
+.about_img{
+    display: grid;
+    justify-content: space-between;
+    position: relative;
 }
 .about__section-image:hover {
     transform: skew(0);
@@ -44,7 +46,7 @@
 }
 
 .about__section-image img {
-    width: 20%;
+    width: 50%;
 
 }
 

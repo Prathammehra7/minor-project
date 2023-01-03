@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --valid: green;
     --focus: orange;
     --invalid: red;
@@ -45,7 +45,7 @@
     --color: var(--blur);
 }
 
-.form-group:valid button {
+form:valid button {
     background-color: hsl(175 60% 40%);
     cursor: pointer;
     color: white;
@@ -55,7 +55,7 @@ input {
     border: 5px solid var(--color, var(--blur));
 }
 
-.form-container {
+form {
     display: grid;
     place-items: center;
     margin-top: 8rem;
@@ -93,7 +93,7 @@ input {
 
     background: var(--color-primary);
     font-size: 1.2rem;
-    /* border: 2px solid transparent; */
+   
     transition: var(--transition);
     padding: 12px 30px;
     border-radius: 1.5rem;
@@ -111,15 +111,11 @@ input {
     height: 45px;
     font-weight: 100;
     font-size: 18px;
-    /* transition: 250ms ease-in-out; */
+    
     border-radius: 20px;
     background-color: gray;
 }
 
-/* .form-container button:hover {
-    transform: translatey(-10px);
-    color: white;
-} */
 
 
 .text-right {
@@ -176,7 +172,7 @@ input {
 
 
 
-/* media query (small screens) */
+
 
 @media screen and (max-width : 600px) {
 
@@ -207,4 +203,4 @@ input {
         background: none;
       
     }
-}
+} */

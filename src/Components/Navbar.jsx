@@ -37,26 +37,12 @@ const Navbar = () => {
                     <img src={Logo} alt="Nav logo" />
                 </Link>
                 <ul className={` nav__links ${isNavShowing ? 'show__nav' : 'hide__nav'}`}   >
-                    {/* {
-                        links.map(({ name, icon, path }, index) => {
-                            return (
-                                <li key={index}>
-                                    <NavLink to={path} className={({ isActive }) => isActive ? 'active-nav' : ''}
-                                        onClick={() => setIsNavShowing(prev => !prev)}>  
-                                        {name} 
-                                        </NavLink>
-                                    <div className="icon">
-                                        {icon}
-                                    </div>  
-                                    </li>
-                                )
-                            })
-                            
-                        } */}
+                   
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/contact">Contact</a></li> 
                         <li><a href="/plans">Plans</a></li>
+                        <li><a href="/trainer">Trainer</a></li>
                         <li  className='login'><a href="/login">Login</a></li>
                    
                 </ul>

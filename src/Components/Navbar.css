@@ -65,7 +65,7 @@ nav {
 }
 
 .nav__container li {
-    width: 10%;
+    width: 8%;
     display: flex;
 }
 
@@ -79,7 +79,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    /* width: 36%; */
+    width: 88%;
 }
 
 .logo {
@@ -94,7 +94,7 @@ nav {
     display: flex;
     gap: 3.5rem;
     align-items: center;
-    width: 75%;
+    width: 80%;
     padding-left: 60px;
 }
 .nav__login {

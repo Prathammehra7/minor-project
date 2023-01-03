@@ -17,14 +17,14 @@ export default function Trial() {
         <>
             <div className="formContainer1">
             <div className="formContainer2">
-                <h1>Contact Us</h1>
+                <h1>Membership</h1>
                 <div className="form">
-                    <label htmlFor="Fname">First Name</label>
+                    <label htmlFor="Fname"> Name</label>
                     <input type="Text" name="Text" id="text" required onChange={(e) => {
                         setText(e.target.value);
                     }} />
-                    <label htmlFor="lname">Last  Name</label>
-                    <input type="text" name="text" id="text" required onChange={(e) => {
+                    <label htmlFor="lname">Contact</label>
+                    <input type="number" name="text" id="text" required onChange={(e) => {
                         setText(e.target.value)
                     }} />
                     <label htmlFor="lname">Country</label>
