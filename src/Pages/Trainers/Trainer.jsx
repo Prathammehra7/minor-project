@@ -70,7 +70,7 @@ const Trainer = () => {
                                         <h4>Age: {train.trainersAge}</h4>
                                         <h4>Time: {train.trainersTime}</h4>
                                         <small>Price: {train.trainersPrice}</small>
-                                        <button><a class="btn lg" onClick={() => {
+                                        <button><a class="btn lg" href='/trainers/' onClick={() => {
                                             window.location.href = "/trainers/" + train._id;
                                         }} >View</a></button>
                                     </Card>
