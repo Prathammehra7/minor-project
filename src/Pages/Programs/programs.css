@@ -1,0 +1,20 @@
+.info p{
+}
+
+
+#programs__item h1{
+
+margin-bottom: 2rem;
+
+}
+#programs__item{
+    background: var(--color-primary);
+    border: 2px solid transparent;
+    text-align: center;
+    padding: 3rem 2rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    /* border-radius: 3rem 3rem 3rem 3rem; */
+    transition: var(--transition);
+    height: auto;
+  }

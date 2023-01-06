@@ -18,7 +18,7 @@ export default function Login() {
 			if (response.data.token) {
 				toast.success("SignUp Successfully");
 				localStorage.setItem("token", response.data.token);
-				window.location.href = "/Contact";
+				window.location.href = "/Trainer";
 			}
 		}).catch(function (error) {
 			toast.warning("Something wrong");
@@ -41,7 +41,7 @@ export default function Login() {
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
-						<input placeholder='At least 8 characters' title="Must be at least 8 characters" pattern='{8,}' id="password" required type="password" onChange={(e) => {
+						<input placeholder='At least 8 characters' title="Must be at least 8 characters" pattern='(?=.*\d)(?=.*[a-z]).{8,}' id="password" required type="password" onChange={(e) => {
 							setpassword(e.target.value)
 						}} />
 						<p class="input-hint">Must be at least 8 characters</p>

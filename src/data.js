@@ -5,80 +5,11 @@ import{GiWeightLiftingUp}  from 'react-icons/gi'
 
 
 
-export const links = [
-
-    {
-        name: "Home" ,
-        icon: "|" ,
-        path : '/'
-    },
-
-    {
-        name: "About",
-        icon: "|" ,
-        path: '/about'
-    },
-
-    {
-        name: "Contact",
-        icon: "|" ,
-        path: '/contact'
-    },
-    {
-        name: "Plans",
-        icon: "|" ,
-        path: '/plans'
-    },
-    {
-        name: "Trainers",
-        icon: "|" ,
-        path: '/trainers'
-    },
-    {
-        name: "Login",
-        path: '/login'
-    }
     
-    
-]
 
 
 
 
-
-
-export const values = [
-    {
-        id: 1,
-        title: "Trainer One",
-        desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum.",
-        trainer: require("./Image/trainer1.jpg")
-
-    },
-    {
-        id: 2,
-        title: "Trainer Two",
-        desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum.",
-        trainer: require("./Image/trainer2.jpg")
-
-
-    },
-    {
-        id: 3,
-        title: "Trainer Three",
-        desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum.",
-        trainer: require("./Image/trainer3.jpg")
-
-
-    },
-    {
-        id: 4,
-        title: "Trainer Four",
-        desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum.",
-        trainer: require("./Image/trainer4.jpg")
-
-    }
-]
 
 
 export const programs = [
@@ -87,28 +18,28 @@ export const programs = [
         icon: <FaRunning/>,
         title: "Program One",
         info: "“When you run, the road belongs to you”",
-        path: "/programsone"
+        path: "/Programone"
     },
     {
         id: 2,
         icon: <GiJumpingRope/>,
         title: "Program Two",
         info: "“When in doubt, just keep jumping.” ",
-        path: "/programstwo"
+        path: "/Programtwo"
     },
     {
         id: 3,
         icon: <GiJumpAcross/>,
         title: "Program Three",
         info: "“Fit is not a destination. It’s a way of life.”",
-        path: "/programsthree"
+        path: "/Programthree"
     },
     {
         id: 4,
         icon: <GiWeightLiftingUp/>,
         title: "Program Four",
         info: "Some are born strong, & others are made strong.",
-        path: "/programsfour"
+        path: "/Programfour"
     }
 
 ]

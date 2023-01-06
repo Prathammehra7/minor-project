@@ -1,0 +1,134 @@
+/*======================= VALUES ===========*/
+
+
+.values__container {
+    display: grid;
+    grid-template-columns: 38% 50%;
+    gap: 12%;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.values__image {
+    filter: saturate(0.25);
+    transition: var(--transition);
+}
+
+.values__image:hover {
+    filter: saturate(1);
+
+}
+
+.values__right>p {
+    margin: 1rem 0 3rem;
+}
+
+.values__left {
+    margin-top: 12rem;
+}
+.poster__container img{
+
+   
+    height: 570px;
+}
+.values__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.4rem 2.4rem;
+}
+
+.card.values__value {
+    padding-top: 3.5rem;
+    text-align: left;
+    position: relative;
+}
+
+.values__value img {
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 2px solid transparent;
+    position: absolute;
+    top: -2rem;
+    left: calc(50% - 2rem);
+    box-shadow: 0 1.5rem 2rem rgba(26, 26, 54, 0.4);
+    transition: var(--transition);
+}
+
+
+.values__value button {
+    margin-top: 4rem;
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+}
+
+.btn {
+    color: var(--color-gray-100);
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.9rem 2rem;
+    background: var(--color-gray-600);
+    border-radius: 1.5rem;
+    transition: var(--transition);
+}
+
+.card.values__value:hover {
+    transform: scale(1.1);
+
+}
+
+.card.values__value span {
+    position: absolute;
+    top: -1.5rem;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+
+
+    /* Values */
+    .values__container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .values__wrapper {
+        gap: 4rem 3rem;
+    }
+
+    .values__image {
+        display: none;
+    }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /* trainer */
+
+    .values__wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .card.values__value {
+        width: 84%;
+        margin-inline: auto;
+    }
+
+
+
+
+}

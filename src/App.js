@@ -12,6 +12,16 @@ import Choose from "./Pages/Choose/Choose";
 // import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Components/Footer";
 import Trial from "./Pages/Trial/Trial";
+import Trainer from "./Pages/Trainers/Trainer";
+import TrainerDetails from "./Pages/TrainersDetails/Details";
+import Programone from "./Pages/Programs/Programone";
+import Programtwo from "./Pages/Programs/Programtwo";
+import Programthree from "./Pages/Programs/Programthree";
+import Programfour from "./Pages/Programs/Programfour";
+import Lisa from "./Pages/TrainersName/Lisa";
+import Chris from "./Pages/TrainersName/Chris";
+import Anne from "./Pages/TrainersName/Anne";
+import Ryan from "./Pages/TrainersName/Ryan";
 
 function App() {
   return (
@@ -25,6 +35,16 @@ function App() {
       {/* <Route path='*' element={<NotFound />} /> */}
       <Route path='/Contact' element={<Contact />} />
       <Route path='/Login' element={<Login />} />
+      <Route path='/Programone' element={<Programone />} />
+      <Route path='/Programtwo' element={<Programtwo />} />
+      <Route path='/Programthree' element={<Programthree />} />
+      <Route path='/Programfour' element={<Programfour />} />
+      <Route path='/TrainersDetails' element={<TrainerDetails />} />
+      <Route path='/Trainer' element={<Trainer/>} />
+      <Route path='/trainers/:trainerid' element={<Lisa/>} />
+      <Route path='/trainers/:trainerid' element={<Chris/>} />
+      <Route path='/trainers/:trainerid' element={<Ryan/>} />
+      <Route path='/trainers/:trainerid' element={<Anne/>} />
       <Route path='/Signup' element={<Signup/>} />
       <Route exact path='/plans' element={<Plans />} />
       <Route path='/Trial' element={<Trial/>} />
