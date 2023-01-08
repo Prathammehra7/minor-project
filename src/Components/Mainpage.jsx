@@ -14,13 +14,6 @@ const Mainpage = () => {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus distinctio culpa aut?</p>
           <Link to="/plans" className='btn lg'> Get started</Link>
         </div>
-        {/* <div className="main__page-right">
-          <div className="main__page-circle"></div>
-          <div className="main__page-image">
-          <img src={Image} alt="Main page Image" />
-          </div>
-          
-        </div> */}
         </div>
     </header>
   )

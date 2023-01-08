@@ -21,7 +21,7 @@ const Contact = () => {
         <div className="contact__wrapper">
           <a href="mailto:manshumehra3@outlook.com" target="_blank" rel="noreferrer noopener"><MdEmail/></a>
           <a href="http://m.me/ernest_achievers" target="_blank" rel="noreferrer noopener"><BsMessenger/></a>
-          <a href="http://wa.me/+919999999999" target="_blank" rel="noreferrer noopener"><IoLogoWhatsapp/></a>
+          <a href="http://wa.me/+918076401975" target="_blank" rel="noreferrer noopener"><IoLogoWhatsapp/></a>
           <a href="https://www.instagram.com/manshumehra" target="_blank" rel="noreferrer noopener"><AiFillInstagram/></a>
         </div>
       </div>

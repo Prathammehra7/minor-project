@@ -5,13 +5,6 @@ import{GiWeightLiftingUp}  from 'react-icons/gi'
 
 
 
-    
-
-
-
-
-
-
 export const programs = [
     {
         id: 1,

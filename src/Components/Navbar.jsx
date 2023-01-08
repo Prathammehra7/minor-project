@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MdOutlineClose } from 'react-icons/md'
 import Logo from '../Image/logo.png'
-// import { links } from '../data'
-// import { login } from '../data'
 import { GoThreeBars } from 'react-icons/go'
 import './Navbar.css'
 

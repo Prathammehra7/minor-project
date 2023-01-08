@@ -519,6 +519,7 @@ footer {
     .main__page {
         height: fit-content;
         padding: 12rem 0;
+        background-size: cover;
     }
 
     .main__page-container {
@@ -576,7 +577,8 @@ footer {
     .main__page {
         margin-top: 0;
         padding: 12rem 0 0;
-        height: 150vh;
+        height: 80vh;
+        background-size: cover;
 
     }
     

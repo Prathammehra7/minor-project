@@ -68,3 +68,53 @@ img {
   button{
     height: 0px;
   }
+
+
+
+  
+
+  @media screen and (max-width: 1024px) {
+
+
+
+    /* Values */
+    .detail__container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .detail__section-content img{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        border: 2px solid transparent;
+        position: absolute;
+        margin-top: -80px;
+        left: calc(50% - 2rem);
+        box-shadow: 0 1.5rem 2rem rgba(26, 26, 54, 0.4);
+        transition: var(--transition);
+    }
+    .detail__section-content p{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    /* trainer */
+
+    .detail__section-content{
+        width: 84%;
+        margin-inline: auto;
+    }
+
+    .detail__section-content p{
+        font-size: 12px;
+    }
+    
+    
+    
+}

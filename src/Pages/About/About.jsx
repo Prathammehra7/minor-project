@@ -82,26 +82,8 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className=" container about__section-image">
-          <div className="about_img">
-            <img src={about1} alt="" />
-          </div>
-          <div className="about_img">
-            <img src={about2} alt="" />
-          </div>
-        </div>
-        <div className=" container about__item-image">
-          <h4>Customer Service</h4>
-          <h4>Communication </h4>
-
-        </div>
-        <div className=" container about__text-image">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, consequatur?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, perspiciatis?</p>
-        </div>
       </section>
-
-
+       
 
     </>
   )
