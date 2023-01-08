@@ -1,5 +1,4 @@
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home/Home";
@@ -22,36 +21,37 @@ import Lisa from "./Pages/TrainersName/Lisa";
 import Chris from "./Pages/TrainersName/Chris";
 import Anne from "./Pages/TrainersName/Anne";
 import Ryan from "./Pages/TrainersName/Ryan";
+import Payment from "./Pages/Payment/Payment";
 
 function App() {
   return (
 
-    <BrowserRouter>
-
+    <Router>
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
         <Route path='/about' element={<About />} />
-      {/* <Route path='*' element={<NotFound />} /> */}
-      <Route path='/Contact' element={<Contact />} />
-      <Route path='/Login' element={<Login />} />
-      <Route path='/Programone' element={<Programone />} />
-      <Route path='/Programtwo' element={<Programtwo />} />
-      <Route path='/Programthree' element={<Programthree />} />
-      <Route path='/Programfour' element={<Programfour />} />
-      <Route path='/TrainersDetails' element={<TrainerDetails />} />
-      <Route path='/Trainer' element={<Trainer/>} />
-      <Route path='/trainers/:trainerid' element={<Lisa/>} />
-      <Route path='/trainers/:trainerid' element={<Chris/>} />
-      <Route path='/trainers/:trainerid' element={<Ryan/>} />
-      <Route path='/trainers/:trainerid' element={<Anne/>} />
-      <Route path='/Signup' element={<Signup/>} />
-      <Route exact path='/plans' element={<Plans />} />
-      <Route path='/Trial' element={<Trial/>} />
-      <Route path='/Choose' element={<Choose/>} />
+        {/* <Route path='*' element={<NotFound />} /> */}
+        <Route path='/Contact' element={<Contact />} />
+        <Route path='/Login' element={<Login />} />
+        <Route path='/Programone' element={<Programone />} />
+        <Route path='/Programtwo' element={<Programtwo />} />
+        <Route path='/Programthree' element={<Programthree />} />
+        <Route path='/Programfour' element={<Programfour />} />
+        <Route path='/TrainersDetails' element={<TrainerDetails />} />
+        <Route path='/Trainer' element={<Trainer />} />
+        <Route path='/Payment' element={<Payment />} />
+        <Route path='/trainers/:trainerid' element={<Lisa />} />
+        <Route path='/trainers/:trainerid' element={<Chris />} />
+        <Route path='/trainers/:trainerid' element={<Ryan />} />
+        <Route path='/trainers/:trainerid' element={<Anne />} />
+        <Route path='/Signup' element={<Signup />} />
+        <Route exact path='/plans' element={<Plans />} />
+        <Route path='/Trial' element={<Trial />} />
+        <Route path='/Choose' element={<Choose />} />
       </Routes>
-      <Footer/>
-    </BrowserRouter>
+      <Footer />
+    </Router>
 
 
   );

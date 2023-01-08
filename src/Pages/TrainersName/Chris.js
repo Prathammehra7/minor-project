@@ -29,16 +29,8 @@ function Chris() {
 
     async function handleBooking() {
 
-        const userId = { id: localStorage.getItem("userid") }
-        console.log(userId);
-        await axios.post(`http://localhost:4000/api/Trainer/findtrainers/${trainerid}`, userId).then(function (response) {
-            {
-
-                window.location.href = "/Payment"
-            }
-        }).catch(function (error) {
-            console.log(error);
-        })
+        window.location.href = "/Payment"
+       
     }
 
     return (
@@ -48,7 +40,7 @@ function Chris() {
                 <div className="container details__container">
                     <div className="details__section-content">
                         <img src="https://img.freepik.com/free-photo/strong-man-his-muscles_144627-8397.jpg?w=360&t=st=1672767525~exp=1672768125~hmac=2eb88bd2fc92fdbf5d36f42ad641537244d97b9428d35abf1a2e6bfa85b3b0c8" alt="" />
-                        <h2>Chris</h2>
+                        <h2>{traine.trainersName}</h2>
                         <p>Chris is a highly skilled performance personal trainer with a strong background in sports science. He holds multiple certifications, including a degree in exercise physiology and a certification as a strength and conditioning coach.
                             Chris has worked with a wide range of clients, including professional athletes, amateur athletes, and individuals looking to improve their physical performance in their daily lives. He is skilled in a variety of training techniques, including strength training, plyometrics, and speed and agility work.
                             In addition to his work as a personal trainer, Chris is also an avid athlete and competes in various sports. He brings his extensive knowledge of training and sport performance to his work with his clients and is committed to ongoing learning and development to stay up-to-date on the latest research and techniques.

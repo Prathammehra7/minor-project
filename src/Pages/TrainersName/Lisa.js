@@ -25,20 +25,21 @@ function Lisa() {
             }
         }
         fetchData();
-    }, []);
+    }, [trainerid]);
 
     async function handleBooking() {
 
-        const userId = { id: localStorage.getItem("userid") }
-        console.log(userId);
-        await axios.post(`http://localhost:4000/api/Trainer/findtrainers/${trainerid}`, userId).then(function (response) {
-            {
+      
+    const userId = { id: localStorage.getItem("userid") }
+    console.log(userId);
+    await axios.get(`http://localhost:4000/api/Trainer/trainers/${trainerid}`, userId).then(function (response) {
+     {
+     window.location.href = "/Payment"
+     }
+    }).catch(function (error) { 
+      console.log(error);
+    })
 
-                window.location.href = "/Payment"
-            }
-        }).catch(function (error) {
-            console.log(error);
-        })
     }
 
     return (
@@ -69,4 +70,4 @@ function Lisa() {
     )
 }
 
-export default Lisa
+export default Lisa;
