@@ -17,7 +17,7 @@ function Ryan() {
         async function fetchData() {
             try {
                 const bookApi = (
-                    await axios.get(`http://localhost:4000/api/Trainer/findtrainers/${trainerid}`, {})).data;
+                    await axios.get(`https://lime-troubled-elephant.cyclic.app/api/Trainer/findtrainers/${trainerid}`, {})).data;
                 settraine(bookApi);
                 console.log(bookApi);
             } catch (error) {
@@ -31,7 +31,7 @@ function Ryan() {
 
         const userId = { id: localStorage.getItem("userid") }
         console.log(userId);
-        await axios.post(`http://localhost:4000/api/Trainer/findtrainers/${trainerid}`, userId).then(function (response) {
+        await axios.post(`https://lime-troubled-elephant.cyclic.app/api/Trainer/findtrainers/${trainerid}`, userId).then(function (response) {
             {
 
                 window.location.href = "/Payment"

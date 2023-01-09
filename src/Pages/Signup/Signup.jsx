@@ -15,7 +15,7 @@ const Signup = () => {
     const handleSignup = async () => {
         const user = { Name, Email, password, confirmPassword };
 
-        await axios.post("http://localhost:4000/api/Signup", user).then(function (response) {
+        await axios.post("https://lime-troubled-elephant.cyclic.app/api/Signup", user).then(function (response) {
 
             if (response.data) {
                 console.log(`user siginup successfully`);

@@ -26,7 +26,7 @@ function Payment() {
       order_id: data.id,
       handler: async (response) => {
         try {
-          const verifyUrl = "http://localhost:4000/api/Payment/verify";
+          const verifyUrl = "https://lime-troubled-elephant.cyclic.app/api/Payment/verify";
           const { data } = await axios.post(verifyUrl, response);
           console.log(data);
           Swal.fire({
@@ -58,7 +58,7 @@ function Payment() {
 
   const handlePayment = async () => {
     try {
-      const orderUrl = "http://localhost:4000/api/Payment/orders";
+      const orderUrl = "https://lime-troubled-elephant.cyclic.app/api/Payment/orders";
       const { data } = await axios.post(orderUrl, { amount: mpayment.price });
       console.log(data);
       initPayment(data.data);

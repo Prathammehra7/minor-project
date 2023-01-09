@@ -22,7 +22,7 @@ const Trainer = () => {
             try {
 
                 const bookApi = (
-                    await axios.get("http://localhost:4000/api/trainer/getTrainers", {})
+                    await axios.get("https://lime-troubled-elephant.cyclic.app/api/trainer/getTrainers", {})
                 ).data;
 
                 settrainer(bookApi);

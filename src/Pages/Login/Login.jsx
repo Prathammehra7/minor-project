@@ -16,7 +16,7 @@ export default function Login() {
 			Email,
 			password,
 		};
-		await axios.post("http://localhost:4000/api/Login", user).then(function (response) {
+		await axios.post("https://lime-troubled-elephant.cyclic.app/api/Login", user).then(function (response) {
 			if (response.data.token) {
 				toast.success("SignUp Successfully");
 				localStorage.setItem("token", response.data.token);
