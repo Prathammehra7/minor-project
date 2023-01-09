@@ -43,7 +43,7 @@ export default function Login() {
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
-						<input placeholder='At least 8 characters' title="Must be at least 8 characters" pattern='(?=.*\d)(?=.*[a-z]).{8,}' id="password" required type="password" onChange={(e) => {
+						<input placeholder='At least 8 characters' title="Must be at least 8 characters" pattern='[A-Za-z0-9][A-Za-z0-9 -_].{6,}' id="password" required type="password" onChange={(e) => {
 							setpassword(e.target.value)
 						}} />
 						<p class="input-hint">Must be at least 8 characters</p>

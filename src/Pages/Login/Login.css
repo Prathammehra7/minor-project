@@ -1,10 +1,11 @@
+
+
 :root {
     --valid: green;
-    --focus: orange;
     --invalid: red;
+    --focus: orange;
     --blur: #ccc;
 }
-
 
 .form-group:has(:invalid) {
     --color: var(--invalid);
@@ -16,17 +17,30 @@
 
 @keyframes shake {
 
-    0%, 100% {
+    0%,
+    100% {
+
         transform: translateX(0);
+
     }
 
-    20%, 40%, 60%,  80% {
+    20%,
+    40%,
+    60%,
+    80% {
+
         transform: translateX(-4%);
     }
 
-    10%,  30%, 50%, 70%, 90% {
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+
         transform: translateX(4%);
     }
+
 }
 
 .form-group:has(:focus) {
@@ -36,24 +50,27 @@
 .form-group:has(:valid) {
     --color: var(--valid);
 }
-
 .form-group:has(:placeholder-shown:not(:focus)) {
     animation: none;
 }
 
 .form-group:has(:placeholder-shown) {
-    --color: var(--blur);
+    --color: (var(--blur))
 }
 
-.form-group:valid button {
-    background-color: hsl(175 60% 40%);
+/* .form-container:valid button {
+
+    background-color: aqua;
     cursor: pointer;
     color: white;
-}
+
+} */
 
 input {
-    border: 5px solid var(--color, var(--blur));
+
+    border: 5px solid var(--color, var(--blur))
 }
+
 
 .form-container {
     display: grid;
@@ -113,7 +130,9 @@ input {
     font-size: 18px;
     /* transition: 250ms ease-in-out; */
     border-radius: 20px;
-    background-color: gray;
+    background-color: rgb(13, 215, 215); 
+     cursor: pointer;
+    color: rgb(3, 0, 0);
 }
 
 /* .form-container button:hover {

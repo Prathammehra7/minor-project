@@ -7,9 +7,8 @@ import { GoThreeBars } from 'react-icons/go'
 import './Navbar.css'
 
 const Navbar = () => {
-    const [query, setQuery] = useState("");
-    const [data, setData] = useState([]);
-    const [menu, setmenu] = useState(false);
+    const [query] = useState("");
+    const [setData] = useState([]);
     const [inout, setinout] = useState()
     const [inoutDirection, setDirection] = useState("/Login");
 
