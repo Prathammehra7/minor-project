@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
+import axios from "axios";
 import { Link } from 'react-router-dom'
 import { MdOutlineClose } from 'react-icons/md'
 import Logo from '../Image/logo.png'
@@ -6,6 +7,40 @@ import { GoThreeBars } from 'react-icons/go'
 import './Navbar.css'
 
 const Navbar = () => {
+    const [query, setQuery] = useState("");
+    const [data, setData] = useState([]);
+    const [menu, setmenu] = useState(false);
+    const [inout, setinout] = useState()
+    const [inoutDirection, setDirection] = useState("/Login");
+
+    useEffect(() => {
+        let tokenval = localStorage.getItem("token");
+
+        if (tokenval) {
+            setinout("Logout")
+            setDirection("/")
+        }
+        else {
+            setinout("Login");
+            setDirection("/Login");
+        }
+    }, [])
+
+    const Handlechange = () => {
+        let tokenval = localStorage.getItem("token");
+        if (tokenval) {
+            localStorage.removeItem("token");
+        }
+    }
+    useEffect(() => {
+        const fetchData = async () => {
+          const res = await axios.get(`http://localhost:5000?q=${query}`);
+          setData(res.data);
+        };
+        if (query.length === 0 || query.length > 2) fetchData();
+      }, [query]);
+
+
     const items = document.querySelectorAll("ul li");
     items.forEach((item) => {
         item.addEventListener("click", () => {
@@ -41,7 +76,9 @@ const Navbar = () => {
                         <li><a href="/contact">Contact</a></li> 
                         <li><a href="/plans">Plans</a></li>
                         <li><a href="/TrainersDetails">Trainer</a></li>
-                        <li  className='login'><a href="/login">Login</a></li>
+                        <li  className='login'><a href={inoutDirection} target={"_main"} onClick={() => {
+                                Handlechange();
+                            }} >{inout}</a></li>
                    
                 </ul>
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import  React from 'react';
 import Header from '../../Components/Header'
 import HeaderImage from '../../Image/header_bg_4.jpg'
 import Card from '../../Ul/Card'
@@ -8,6 +8,16 @@ import './plans.css'
 
 
 const Plans = () => {
+ 
+  async function handleBooking() {
+
+    const userId = { id: localStorage.getItem("userid") }
+    console.log(userId);
+   
+            window.location.href = "/Payment"
+    
+}
+
   return (
     <>
       <Header title="Membership Plans" image={HeaderImage}>
@@ -32,7 +42,7 @@ const Plans = () => {
                   })
                 }
                 <button >
-                <a className='btn lg' href="/Choose">Choose Plan</a>
+                <a className='btn lg' onClick={handleBooking} >Choose Plan</a>
                 </button>
               </Card>
             })

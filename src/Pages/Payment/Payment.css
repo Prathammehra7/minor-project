@@ -24,6 +24,15 @@
     width: 50%;
     background-color: blue;
     color: white;
+    height: 50px;
+}
+.main__header-left h1 {
+
+    color: black;
+}
+.main__header-left h2 {
+
+    color: black;
 }
 
 .main__header {
@@ -98,10 +107,18 @@
         height: fit-content;
         padding: 12rem 0;
     }
+    .main__header-left h1 {
 
+        color: black;
+    }
+    .main__header-left h2 {
+
+        color: black;
+    }
     .main__header-containers {
         gap: 0;
     }
+
 
     .main__header-circle {
         width: 16rem;

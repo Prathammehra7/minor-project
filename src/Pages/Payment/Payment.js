@@ -30,7 +30,7 @@ function Payment() {
           const { data } = await axios.post(verifyUrl, response);
           console.log(data);
           Swal.fire({
-            text: 'Your Booking has been Confirmed',
+            text: 'Your Trainer has been Confirmed',
             imageUrl: 'https://cdn.dribbble.com/users/911154/screenshots/3332845/vfmov3.gif',
             imageWidth: 300,
             imageHeight: 200,

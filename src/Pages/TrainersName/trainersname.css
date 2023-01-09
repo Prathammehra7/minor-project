@@ -30,7 +30,7 @@
     position: relative;
     box-shadow: 0 1.5rem 2rem rgba(26, 26, 54, 0.4);
     transition: var(--transition);
-    left: 480px;
+    left: 550px;
     margin-bottom: 2rem;
     display: grid;
     justify-content: center;

@@ -29,7 +29,7 @@
 .poster__container img{
 
    
-    height: 570px;
+    height: 630px;
 }
 .values__wrapper {
     display: grid;
@@ -100,6 +100,7 @@
         grid-template-columns: 1fr;
         justify-content: center;
         gap: 4rem;
+        margin-top: -170px;
     }
 
     .values__wrapper {
@@ -109,7 +110,11 @@
     .values__image {
         display: none;
     }
+    .poster__container img {
+        background-size: cover;
+        height: auto;
 
+      }
 
 }
 
@@ -127,7 +132,10 @@
         width: 84%;
         margin-inline: auto;
     }
-
+    .poster__container img {
+        background-size: cover;
+        height: auto;
+      }
 
 
 
