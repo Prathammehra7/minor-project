@@ -20,7 +20,7 @@ const Alltrainers = () => {
         async function fetchData() {
             try {
                 const bookApi = (
-                    await axios.get(`http://localhost:4000/api/Trainer/findtrainers/${trainerid}`, {})).data;
+                    await axios.get(`https://lime-troubled-elephant.cyclic.app/api/Trainer/findtrainers/${trainerid}`, {})).data;
                 setalltraine(bookApi);
                 console.log(bookApi);
             } catch (error) {
