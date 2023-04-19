@@ -135,6 +135,8 @@
     .poster__container img {
         background-size: cover;
         height: auto;
+        margin-top: 15rem;
+        margin-bottom: 15rem;
       }
 
 

@@ -6,12 +6,12 @@ import axios from "axios";
 
 export default function Login() {
 
-	
-	
+
+
 	const [Email, setEmail] = useState("");
 	const [password, setpassword] = useState("");
 	async function handleLogin() {
-	
+
 		const user = {
 			Email,
 			password,
@@ -33,34 +33,43 @@ export default function Login() {
 
 	return (
 		<>
-			<div className='container form-container'>
-				<div className="form-items">
-					<div class="form-group">
-						<label for="email">Email</label>
-						<input placeholder='name@example.com' pattern='[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}' id="email" required type="email" title="must be a valid email address" onChange={(e) => {
-							setEmail(e.target.value)
-						}} />
-					</div>
-					<div class="form-group">
-						<label for="password">Password</label>
-						<input placeholder='At least 8 characters' title="Must be at least 8 characters" pattern='[A-Za-z0-9][A-Za-z0-9 -_].{6,}' id="password" required type="password" onChange={(e) => {
-							setpassword(e.target.value)
-						}} />
-						<p class="input-hint">Must be at least 8 characters</p>
-					</div>
-					<div class="text-right p-t-13 p-b-23">
-						<span class="txt1">Forgot </span>
-						<a href="/Forgot" class="txt2">Username / Password?</a>
-					</div>
-					<button onClick={() => {
-						handleLogin()
-					}} >Submit</button>
-					<div class="flex-col-c p-t-170 p-b-40">
-						<span class="txt1 p-b-9">Don’t have an account?</span>
-						<a href="/Signup" class="txt3">Sign up now</a>
+			<section className='section'>
+				<div className=" form-container">
+					<div className="mainn">
+						<div className="login-box">
+							<div>
+								<h2>Login</h2>
+								<div className="input-box">
+									{/* <span className="icons"><GrMail /></span> */}
+									<input pattern='[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}' id="email" required type="email" title="must be a valid email address" onChange={(e) => {
+										setEmail(e.target.value)
+									}} />
+									<label> Email</label>
+								</div>
+								<div className="input-box">
+									{/* <span className="icons"><AiFillLock /></span> */}
+									<input title="Must be at least 8 characters" pattern='[A-Za-z0-9][A-Za-z0-9 -_].{6,}' id="password" required type="password" onChange={(e) => {
+										setpassword(e.target.value)
+									}} />
+									<label> password</label>
+								</div>
+								<div className="remember">
+									<label htmlFor=""> <input type="checkbox" /> Remember me</label>
+									<a href="#">Forgot Password</a>
+								</div>
+								<button className='loginbutton' type='submit' required onClick={() => {
+									handleLogin()
+								}} >Submit</button>
+								<div className="signup">
+									<p>Don't have an account?
+										<a href="/signup"> Register </a>
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 			<ToastContainer />
 
 		</>

@@ -1,11 +1,11 @@
 import { useState, React, useEffect } from 'react'
 import SectionHead from '../../Components/SectionHead'
 import { CgGym } from 'react-icons/cg'
-import axios from 'axios'
-// import { values } from '../../data'
-import Card from '../../Ul/Card'
 import poster from '../../Image/poster.png'
+import Card from '../../Ul/Card'
+import axios from 'axios'
 import "./trainer.css"
+// import { values } from '../../data'
 
 
 const Trainer = () => {
@@ -22,7 +22,7 @@ const Trainer = () => {
             try {
 
                 const bookApi = (
-                    await axios.get("https://lime-troubled-elephant.cyclic.app/api/trainer/getTrainers", {})
+                    await axios.get("http://localhost:4000/api/Trainer/getTrainers", {})
                 ).data;
 
                 settrainer(bookApi);
@@ -42,7 +42,7 @@ const Trainer = () => {
         <>
 
             <section>
-                <div className=" poster__container">
+                <div className="poster__containers">
                     <img src={poster} alt="" />
                 </div>
             </section>
@@ -69,9 +69,8 @@ const Trainer = () => {
                                         <h4>Height: {train.trainersHeight}</h4>
                                         <h4>Age: {train.trainersAge}</h4>
                                         <h4>Time: {train.trainersTime}</h4>
-                                        <small>Price: {train.trainersPrice}</small>
                                         <button><a class="btn lg" onClick={() => {
-                                            window.location.href = "/trainers/" + train._id;
+                                            window.location.href = "/TrainersName/" + train._id;
                                         }} >View</a></button>
                                     </Card>
                                 }))

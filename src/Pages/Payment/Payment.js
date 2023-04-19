@@ -8,7 +8,7 @@ function Payment() {
 
   const [mpayment, setmpayment] = useState({
     price: 99,
-    movie: "Movie",
+    movie: "Tainer",
   });
 
   
