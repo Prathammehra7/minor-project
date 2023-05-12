@@ -127,7 +127,7 @@
     margin-left: 15%;
     list-style: none;
     margin-bottom: 8rem;
-    
+
 }
 
 .carousel-indicators .active {
@@ -163,7 +163,7 @@
 
 .d-block img {
     width: 100%;
-    
+
     height: 50%;
 }
 
@@ -278,7 +278,8 @@ p {
     text-align: center;
     font-size: 25px;
 }
-.carousel-caption button a{
+
+.carousel-caption button a {
     width: 100%;
     display: inline-block;
 }
@@ -455,6 +456,7 @@ footer {
         width: 16rem;
         height: 16rem;
     }
+
     /* .main__page {
       background-size: cover;
       background-repeat: no-repeat;
@@ -468,7 +470,7 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
-   
+
 
     /* FAQs */
 
@@ -482,22 +484,31 @@ footer {
     .footer__container {
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
-    } 
-    .carousel-control-next, .carousel-control-prev{
-        height: 600px;
     }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        height: 400px;
+        margin-top: 150px;
+    }
+
     .carousel-caption h3 {
         font-size: 25px;
     }
+
     .carousel-caption p {
         font-size: 25px;
     }
+    .w-100 {
+        height: 400px;
+      }
+
 }
 
 
 
 @media screen and (max-width: 600px) {
-    
+
     /* Main page*/
     .main__page {
         margin-top: 0;
@@ -506,66 +517,71 @@ footer {
         background-size: cover;
 
     }
-    
+
+    .carousel {
+        padding-top: 50px;
+    }
+
     .main__page-image,
     .main__page-circle {
         display: none;
     }
-    
+
     .main__page-container {
         grid-template-columns: 1fr;
     }
-    
-    
+
+
     /* Programs */
     .programs__wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
         margin-top: 3rem;
     }
-    
+
     .programs__program {
         width: 84%;
         margin: 0 auto;
     }
-    
-    
-  
-    
+
+
+
+
     /* FAQs */
     .faqs__wrapper {
         gap: 1rem;
         margin-top: 3rem;
     }
-    
-  
-    
+
+
+
     /* Footer */
     footer {
         margin-top: 7rem;
     }
-    
+
     .footer__container {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
+
     .footer__container article {
         align-items: center;
     }
-    
+
     .footer__container article p {
-        
+
         text-align: center;
     }
-    
-    
+
+
     .carousel-caption h3 {
         font-size: 20px;
     }
+
     .carousel-caption p {
         font-size: 20px;
     }
-    
-    
+
+
 }
