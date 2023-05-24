@@ -22,6 +22,8 @@ import AllTrainers from "./Pages/TrainersName/Alltrainers";
 // import Anne from "./Pages/TrainersName/Anne";
 // import Ryan from "./Pages/TrainersName/Ryan";
 import Payment from "./Pages/Payment/Payment";
+import Profile from "./Pages/Profile/profile";
+import Cart from "./Pages/Cart/Cart";
 
 function App() {
   return (
@@ -39,8 +41,10 @@ function App() {
         <Route path='/Programthree' element={<Programthree />} />
         <Route path='/Programfour' element={<Programfour />} />
         <Route path='/TrainersDetails' element={<TrainerDetails />} />
+        <Route path='/Profile' element={<Profile />} />
         <Route path='/Trainer' element={<Trainer />} />
         <Route path='/Payment' element={<Payment />} />
+        <Route path='/Cart' element={<Cart />} />
         <Route path='/TrainersName/:trainerid' element={<AllTrainers />} />
         {/* <Route path='/TrainersName/:trainerid' element={<Chris />} />
         <Route path='/TrainersName/:trainerid' element={<Ryan />} />

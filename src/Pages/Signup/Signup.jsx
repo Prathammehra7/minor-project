@@ -40,14 +40,14 @@ const Signup = () => {
                                 <h2>Sign up</h2>
                                 <div className="input-boxs">
                                     {/* <span className="icons"><GrMail /></span> */}
-                                    <input title='XYZ' id="text" required type="text" onChange={(e) => {
+                                    <input title='XYZ' id="text" name='Name' required type="text" onChange={(e) => {
                                         setName(e.target.value)
                                     }} />
                                     <label>Name</label>
                                 </div>
                                 <div className="input-boxs">
                                     {/* <span className="icons"><AiFillLock /></span> */}
-                                    <input title='name@example.com' pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" id="email" required type="email" title="must be a valid email address" onChange={(e) => {
+                                    <input title='name@example.com' pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" id="email" required type="email" name='Email' onChange={(e) => {
                                         setEmail(e.target.value)
                                     }} />
                                     <label>Email</label>

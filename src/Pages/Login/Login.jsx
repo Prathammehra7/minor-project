@@ -12,20 +12,27 @@ export default function Login() {
 	const [password, setpassword] = useState("");
 	async function handleLogin() {
 
-		const user = {
-			Email,
-			password,
-		};
-		await axios.post("https://lime-troubled-elephant.cyclic.app/api/Login", user).then(function (response) {
-			if (response.data.token) {
-				toast.success("SignUp Successfully");
-				localStorage.setItem("token", response.data.token);
+		try {
+			const user = {
+				Email,
+				password,
+			};
+			const res = await axios.post("https://lime-troubled-elephant.cyclic.app/api/Login", user)
+				console.log(res.data);
+
+			if (res && res.data) {
+				console.log(res.data);
+				toast.success("login Successfully");
+				localStorage.setItem("token", res.data.token);
+				localStorage.setItem("userID", res.data.userID);
+				localStorage.setItem("Name", res.data.Name);
+				localStorage.setItem("Email", res.data.Email);
 				window.location.href = "/Trainer";
 			}
-		}).catch(function (error) {
-			toast.warning("Something wrong");
+
+		} catch (error) {
 			console.log(error);
-		})
+		}
 
 
 
@@ -41,7 +48,7 @@ export default function Login() {
 								<h2>Login</h2>
 								<div className="input-box">
 									{/* <span className="icons"><GrMail /></span> */}
-									<input pattern='[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}' id="email" required type="email" title="must be a valid email address" onChange={(e) => {
+									<input pattern='[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}' id="email" name='Email' required type="email" title="must be a valid email address" onChange={(e) => {
 										setEmail(e.target.value)
 									}} />
 									<label> Email</label>
