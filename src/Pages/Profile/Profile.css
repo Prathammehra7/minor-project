@@ -1,5 +1,4 @@
-.profile
-{
+.profile {
     background-image: url(https://st.depositphotos.com/1280399/1405/i/600/depositphotos_14050173-stock-photo-blue-abstract-background-with-soft.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,16 +7,15 @@
     position: relative;
 }
 
-.profile_div
-{
+.profile_div {
     padding: 0px 150px;
     position: absolute;
     top: 29px;
     width: 100vw;
     margin-top: 40px;
 }
-.profile_h3
-{
+
+.profile_h3 {
     text-align: center;
     margin-top: 25px;
     font-size: xx-large;
@@ -25,8 +23,8 @@
     padding: 10px 0;
     background: black;
 }
-.psec
-{
+
+.psec {
     border: 2px solid lavender;
     display: flex;
     align-items: center;
@@ -34,32 +32,32 @@
     margin: 30px 0px;
     justify-content: space-evenly;
 }
-.psec_img
-{
+
+.psec_img {
     width: 250px;
     border-radius: 50%;
     box-shadow: 0px 0px 13px 11px lightcyan;
 }
-.psec_img_div
-{
+
+.psec_img_div {
     display: flex;
     flex-direction: column;
 }
-.psec_btn:active
-{
+
+.psec_btn:active {
     background-color: black;
     color: antiquewhite;
     border: 1px solid black;
 }
-.psec_div
-{
+
+.psec_div {
     display: flex;
     flex-direction: column;
     align-items: end;
     height: 300px;
 }
-.psec_input
-{
+
+.psec_input {
     padding: 8px 10px;
     font-size: larger;
     margin-left: 60px;
@@ -70,17 +68,19 @@
     border-bottom: 5px solid darkgray;
     box-shadow: 3px 4px 6px 2px darkgrey;
 }
-.psec_input_name
-{
+
+.psec_input_name {
     text-transform: capitalize;
 }
-.profile_label
-{
+
+.profile_label {
     color: ghostwhite;
 }
+
 input[type="file"] {
     display: none;
 }
+
 .psec_btn {
     display: inline-block;
     font-size: large;
@@ -92,4 +92,62 @@ input[type="file"] {
     color: #f1f1f1;
     border: 1px solid crimson;
     text-align: center;
+}
+
+
+@media screen and (max-width : 1200px) {
+
+    .profile {
+
+        height: 800px;
+    }
+
+    .profile_div {
+        height: 100vh;
+        width: 100%;
+        padding: 50px 50px;
+
+    }
+
+    .psec {
+        height: auto;
+        display: grid;
+        justify-content: space-around;
+        align-content: end;
+        margin: 4px 0px;
+    }
+
+    .psec_div {
+        height: auto;
+        display: grid;
+        justify-content: space-around;
+        align-content: end;
+        padding: 50px 40px;
+    }
+
+
+
+    .profile_label {
+        width: 100%;
+        color: black;
+        font-size: 15px;
+      }
+    .profile_label input {
+        width: auto;
+        padding: 2px 7px;
+        margin: 10px 5px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

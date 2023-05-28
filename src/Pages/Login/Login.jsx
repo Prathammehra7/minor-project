@@ -8,25 +8,25 @@ export default function Login() {
 
 
 
-	const [Email, setEmail] = useState("");
+	const [email, setuserEmail] = useState("");
 	const [password, setpassword] = useState("");
 	async function handleLogin() {
 
 		try {
 			const user = {
-				Email,
+				email,
 				password,
 			};
-			const res = await axios.post("https://lime-troubled-elephant.cyclic.app/api/Login", user)
-				console.log(res.data);
+			const res = await axios.post("http://localhost:4000/api/Login", user)
+				console.log(res);
 
 			if (res && res.data) {
 				console.log(res.data);
 				toast.success("login Successfully");
 				localStorage.setItem("token", res.data.token);
 				localStorage.setItem("userID", res.data.userID);
-				localStorage.setItem("Name", res.data.Name);
-				localStorage.setItem("Email", res.data.Email);
+				localStorage.setItem("name", res.data.name);
+				localStorage.setItem("email", res.data.email);
 				window.location.href = "/Trainer";
 			}
 
@@ -49,7 +49,7 @@ export default function Login() {
 								<div className="input-box">
 									{/* <span className="icons"><GrMail /></span> */}
 									<input pattern='[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}' id="email" name='Email' required type="email" title="must be a valid email address" onChange={(e) => {
-										setEmail(e.target.value)
+										setuserEmail(e.target.value)
 									}} />
 									<label> Email</label>
 								</div>

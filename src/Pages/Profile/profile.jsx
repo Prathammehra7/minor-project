@@ -4,8 +4,8 @@ import "./Profile.css"
 function Profile() {
 
     const id = localStorage.getItem("userID");
-    const name = localStorage.getItem("Name");
-    const email = localStorage.getItem("Email");
+    const name = localStorage.getItem("name");
+    const email = localStorage.getItem("email");
     const avatar = localStorage.getItem("avatar");
     const order = localStorage.getItem("razorpay_order_id")
     const pay = localStorage.getItem("razorpay_payment_id")
@@ -16,10 +16,10 @@ function Profile() {
          <h3 className='profile_h3'>User Profile</h3>
 
          <div className='psec'>
-            <div className='psec_img_div'>
+            {/* <div className='psec_img_div'>
                 <img src={avatar} alt="" className='psec_img'/>
                 <label class="psec_btn"><input type="file"/>Update profile</label>
-            </div>
+            </div> */}
            <div className='psec_div'>
              <label className='profile_label' >User ID :      <input type="text"  className='psec_input' value={id} readonly/></label>
              <label className='profile_label' >Name :         <input type="text"  className='psec_input psec_input_name' value={name} readonly/></label>

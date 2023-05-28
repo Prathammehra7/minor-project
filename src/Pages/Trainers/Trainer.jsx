@@ -5,12 +5,14 @@ import poster from '../../Image/poster.png'
 import Card from '../../Ul/Card'
 import axios from 'axios'
 import "./trainer.css"
+
 // import { values } from '../../data'
 
 
 const Trainer = () => {
 
     const [trainer, settrainer] = useState([])
+
     useEffect(() => {
 
         axios.defaults.headers = {
@@ -69,9 +71,11 @@ const Trainer = () => {
                                         <h4>Height: {train.trainersHeight}</h4>
                                         <h4>Age: {train.trainersAge}</h4>
                                         <h4>Time: {train.trainersTime}</h4>
+                                        <h4>price: {train.price}</h4>
                                         <button><a class="btn lg" onClick={() => {
                                             window.location.href = "/TrainersName/" + train._id;
                                         }} >View</a></button>
+
                                     </Card>
                                 }))
 

@@ -64,27 +64,9 @@ const Alltrainers = () => {
                                 <h5>Email: {alltraine.trainersemail}</h5>
                             </div>
 
-                            {/* <button><a class="btn-book" onClick={handleBooking} > Book </a></button> */}
-                            {/* <button className="btn-book" onClick={() => addItem(alltraine)}>Add to cart</button> */}
                             <button> <a className='btn-book' onClick={() => addItem(alltraine)}>Add to cart</a> </button>
-                            {/* {
-                                    alltraine.map(((train, id) => {
-                                        return <Card key={id} className="values__value">
-                                            <img src={train.trainersimg} alt="" />
-                                            <h2>{train.trainersName}</h2>
-                                            <h3>{train.trainersabout}</h3>
-                                            <div className='bottom-info'>
-                                                <h5>Experience: {train.trainersexp}</h5>
-                                                <h5>Age: {train.trainersAge}</h5>
-                                                <h5>Price: {train.trainersPrice}</h5>
-                                                <h5>Email: {train.trainersemail}</h5>
-                                            </div>
-                                            <button className="shophome_cart_msg" onClick={() => 
-                                                addItem(alltraine)}>Add to cart</button>
-                                        </Card>
-                                    }))
 
-                                } */}
+                       
 
 
                         </div>

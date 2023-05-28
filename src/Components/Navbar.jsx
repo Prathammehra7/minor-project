@@ -16,12 +16,12 @@ const Navbar = () => {
 
     useEffect(() => {
         let tokenval = localStorage.getItem("token");
-        var Name = localStorage.getItem("firstName");
+        var name = localStorage.getItem("name");
 
         if (tokenval) {
             setinout("Logout")
             setDirection("/")
-            setname(Name);
+            setname(name);
         }
         else {
             setinout("Login");
@@ -85,8 +85,8 @@ const Navbar = () => {
                         !localStorage.getItem('token') ?
                             <li><a className='login' href="/Login">Login</a></li>
                             :
-                           <li>
-                             <div className="dropdown">
+                          <li>
+                               <div className="dropdown">
                                 <button className="dropbtn">{name} <HiOutlineChevronDown className="dropdown_icon" /></button>
                                 <div className="dropdown-content" >
                                     <NavLink to="/Profile" className="dropdown_navlink">Profile</NavLink>
@@ -96,7 +96,7 @@ const Navbar = () => {
                                 </div>
                                 {/* <NavLink to="/Cart" className="cart"><HiShoppingCart size={32} color="#F9FFEA" className="cartIcon" />{!isEmpty ? <span id="cart_num">{totalItems}</span> : <span></span>}</NavLink> */}
                             </div>
-                           </li>
+                          </li>
                     }
                     {
                         !localStorage.getItem('token') ?

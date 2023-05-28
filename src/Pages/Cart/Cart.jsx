@@ -9,10 +9,10 @@ import { useParams } from 'react-router-dom';
 
 function Cart() {
 
-  const{bookid} = useParams();
+  const { bookid } = useParams();
 
 
-  const  {
+  const {
     isEmpty,
     totalUniqueItems,
     totalItems,
@@ -22,11 +22,11 @@ function Cart() {
     removeItem,
     emptyCart,
   } = useCart();
- 
+
   // payment gatway
 
-  const [bpayment,setbpayment] = useState({
-    price : {cartTotal}
+  const [bpayment, setbpayment] = useState({
+    price: { cartTotal }
   });
 
   // const booksbook = async() => {
@@ -38,7 +38,7 @@ function Cart() {
   //   })
   // }
 
-  
+
   const initPayment = (data) => {
     const options = {
       key: 'rzp_test_wozmO8VRB0IT0q',
@@ -66,8 +66,8 @@ function Cart() {
             confirmButtonText: 'OK'
           }).then((result) => {
             if (result.isConfirmed) {
-              localStorage.setItem("razorpay_order_id",response.razorpay_order_id);
-              localStorage.setItem("razorpay_payment_id",response.razorpay_payment_id);
+              localStorage.setItem("razorpay_order_id", response.razorpay_order_id);
+              localStorage.setItem("razorpay_payment_id", response.razorpay_payment_id);
               // localStorage.setItem("items",{items})
               emptyCart();
 
@@ -90,11 +90,11 @@ function Cart() {
   const paymentHandle = async (amount) => {
 
     try {
-      const _data = {amount : amount}
+      const _data = { amount: amount }
       const orderUrl = "https://busy-gray-dibbler-wear.cyclic.app/api/payment/orders";
-		  const { data } = await axios.post(orderUrl, _data);
-		  console.log(data);
-		  initPayment(data.data);
+      const { data } = await axios.post(orderUrl, _data);
+      console.log(data);
+      initPayment(data.data);
     } catch (error) {
       console.log(error);
     }
@@ -105,46 +105,47 @@ function Cart() {
 
 
   return (
-    
-    <div>
+
+    <div className='container-cart'>
       <table>
-          <tr>
-            <th colSpan={6} className="main_th">Your Cart</th>
-          </tr>
-          <tr className='head'>
-            <th>Book img</th>
-            <th>Book title</th>
-            <th>Book price ₹</th>
-            <th>Total quantity</th>
-            <th>Book quantity</th>
-            <th>Book remove</th>
-          </tr>
-          {
-            items.map((item,id) => {
-              return (
-                <tr>
-                  <td className='td_img'><img src={item.trainersimg} alt="" /></td>
-                  <td>{item.trainersName}</td>
-                  <td>{item.trainersabout}</td>
-                  <td>{item.trainersPrice}</td>
-                  <td>
+        <tr>
+          <th colSpan={6} className="main_th">Your Cart</th>
+        </tr>
+        <tr className='head'>
+          <th>Trainer img</th>
+          <th>Trainer Name</th>
+          <th>Trainer price ₹</th>
+          <th>Trainer Time</th>
+          {/* <th>Total quantity</th> */}
+          <th>Book remove</th>
+        </tr>
+        {
+          items.map((item, id) => {
+            return (
+              <tr>
+                <td className='td_img'><img src={item.trainersimg} alt="" /></td>
+                <td>{item.trainersName}</td>
+                <td>{item.price}</td>
+                <td>{item.trainersTime}</td>
+                {/* <td>
                   <button className='cart_btn' onClick={() => updateItemQuantity(item.id, item.quantity - 1)}> - </button>&nbsp;&nbsp;
                   <button className='cart_btn' onClick={() => updateItemQuantity(item.id, item.quantity + 1)}> + </button>
-                  </td>
-                  <td><button className='cart_btn_remove' onClick={() => removeItem(item.id)}>&times;</button></td>
-                </tr>
-              )
-            })
-          }
+                  </td> */}
+                <td><button className='cart_btn_remove' onClick={() => removeItem(item.id)}>&times;</button></td>
+              </tr>
+            )
+          })
+        }
       </table>
-      {!isEmpty && 
-        <tr>
+      {!isEmpty &&
+        <div className='total-price'>
+
             <td><h4>Total price ₹ : {cartTotal}</h4></td>
             <td>
-            <button className='cart_clr_btn' onClick={() => emptyCart() }>Clear cart</button>
-            <button className='cart_payment_btn' onClick={() => paymentHandle(cartTotal)}>Clear Payment</button>
+              <button className='cart_clr_btn' onClick={() => emptyCart()}>Clear cart</button>
+              <button className='cart_payment_btn' onClick={() => paymentHandle(cartTotal)}>Done Payment</button>
             </td>
-        </tr>
+        </div>
       }
 
     </div>
