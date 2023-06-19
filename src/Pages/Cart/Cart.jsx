@@ -95,7 +95,8 @@ function Cart() {
       const { data } = await axios.post(orderUrl, _data);
       console.log(data);
       initPayment(data.data);
-    } catch (error) {
+    }
+    catch (error) {
       console.log(error);
     }
 
@@ -140,11 +141,11 @@ function Cart() {
       {!isEmpty &&
         <div className='total-price'>
 
-            <td><h4>Total price ₹ : {cartTotal}</h4></td>
-            <td>
-              <button className='cart_clr_btn' onClick={() => emptyCart()}>Clear cart</button>
-              <button className='cart_payment_btn' onClick={() => paymentHandle(cartTotal)}>Done Payment</button>
-            </td>
+          <td><h4>Total price ₹ : {cartTotal}</h4></td>
+          <td>
+            <button className='cart_clr_btn' onClick={() => emptyCart()}>Clear cart</button>
+            <button className='cart_payment_btn' onClick={() => paymentHandle(cartTotal)}>Done Payment</button>
+          </td>
         </div>
       }
 

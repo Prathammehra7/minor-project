@@ -23,7 +23,7 @@ const Alltrainers = () => {
         async function fetchData() {
             try {
                 const bookApi = (
-                    await axios.get(`https://lime-troubled-elephant.cyclic.app/api/Trainer/findtrainers/${trainerid}`, {})).data;
+                    await axios.get(`http://localhost:4000/api/Trainer/findtrainers/${trainerid}`, {})).data;
                 setalltraine(bookApi);
                 console.log(bookApi);
             } catch (error) {
@@ -58,15 +58,15 @@ const Alltrainers = () => {
                             <h2>{alltraine.trainersName}</h2>
                             <h3>{alltraine.trainersabout}</h3>
                             <div className='bottom-info'>
+                                <h5>Trainers Speciality: {alltraine.trainersspeciality}</h5>
                                 <h5>Experience: {alltraine.trainersexp}</h5>
                                 <h5>Age: {alltraine.trainersAge}</h5>
-                                <h5>Price: {alltraine.trainersPrice}</h5>
                                 <h5>Email: {alltraine.trainersemail}</h5>
                             </div>
 
                             <button> <a className='btn-book' onClick={() => addItem(alltraine)}>Add to cart</a> </button>
 
-                       
+
 
 
                         </div>

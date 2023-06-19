@@ -53,7 +53,6 @@ nav {
     color: #e6e6fa;
     font-size: larger;
     position: relative;
-    right: 38px;
     top: -31px;
   }
 
@@ -418,8 +417,8 @@ nav {
     }
 
     .cart {
-        margin-left: 210px;
-        width: 120px;
+        margin-left: 150px;
+        width: auto;
         display: flex;
         justify-content: center;
         background-color: black;

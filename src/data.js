@@ -42,7 +42,7 @@ export const programs = [
 
     export const plans = [
         {
-            id: 1,
+            id: 0,
             name: 'Bronze Package',
             desc: 'This package is perfect for busy people who need home service',
             price: 11.99,
@@ -54,7 +54,7 @@ export const programs = [
             ]
         },
         {
-            id: 2,
+            id: 1,
             name: 'Silver Package',
             desc: 'This package is perfect for beginners who need constant help',
             price: 29.99,
@@ -68,7 +68,7 @@ export const programs = [
             ]
         },
         {
-            id: 3,
+            id: 2,
             name: 'Gold Package',
             desc: 'This is the perfect package for beginners who know what their doing',
             price: 49.99,
@@ -85,7 +85,7 @@ export const programs = [
                
         },
         {
-            id: 4,
+            id: 3,
             name: 'Platinum Package',
             desc: 'This package is perfect for busy people who need home service',
             price: 79.99,
@@ -102,7 +102,7 @@ export const programs = [
             ]
         },
         {
-            id: 5,
+            id: 4,
             name: 'Diamond Package',
             desc: 'This package is perfect for busy people who need home service',
             price: 109.99,
@@ -121,7 +121,7 @@ export const programs = [
             ]
         },
         {
-            id: 6,
+            id: 5,
             name: 'Crown Package',
             desc: 'This package is perfect for busy people who need home service',
             price: 119.99,
