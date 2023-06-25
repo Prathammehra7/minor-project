@@ -118,7 +118,7 @@ function Cart() {
           <th>Trainer price ₹</th>
           <th>Trainer Time</th>
           {/* <th>Total quantity</th> */}
-          <th>Book remove</th>
+          <th>Trainer remove</th>
         </tr>
         {
           items.map((item, id) => {

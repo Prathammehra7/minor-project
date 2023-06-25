@@ -7,7 +7,6 @@ import About from "./Pages/About/About";
 import Plans from "./Pages/plans/Plans";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
-import Choose from "./Pages/Choose/Choose";
 // import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Components/Footer";
 import Trial from "./Pages/Trial/Trial";
@@ -52,7 +51,6 @@ function App() {
         <Route path='/Signup' element={<Signup />} />
         <Route exact path='/plans' element={<Plans />} />
         <Route path='/Trial' element={<Trial />} />
-        <Route path='/Choose' element={<Choose />} />
       </Routes>
       <Footer />
     </Router>
